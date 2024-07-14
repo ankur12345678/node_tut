@@ -16,13 +16,9 @@ const fs = require("fs");
 
 //async doest returns anything but it expects a callback function to handle error and give result
 
-fs.readFile("./hello.txt", "utf-8", (err, result) => {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log(result);
-  }
+fs.readFile("./new_file.txt", "utf-8", function (err, result) {
+  console.log(result);
 });
 
-fs.appendFileSync("./new_file.txt", "data to append");
+// fs.appendFileSync("./new_file.txt", "data to append");
 //we can also copy unlink and check stats , create directories etc
